@@ -24,7 +24,7 @@ body {
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
     padding: 2rem;
-    margin-top: -1.5%;
+    margin-top: -1.75%;
   }
 
   #gallery {
