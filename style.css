@@ -5,20 +5,42 @@ body {
     padding: 0;
   }
 
+
+  .lore-text {
+    width: 100%;
+    height: auto;
+  }
+
+  .lore-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    margin-top: -2.5%;
+  }
+
   .container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
     padding: 2rem;
+    margin-top: -1.5%;
+  }
+
+  #gallery {
+    padding-left: 9%;
+    padding-right: 9%;
   }
 
   .nft {
-    border: 1px solid #ccc;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border: 4px solid #000;
+    border-radius: 4px;
+    box-shadow: -5px 10px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.45);
     overflow: hidden;
     padding: 1rem;
     text-align: center;
     background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
   }
 
   .nft img {
@@ -33,3 +55,17 @@ body {
     object-fit: contain;
   }
   
+  .nft video {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .nft.active {
+    transform: scale(2); /* Adjust the scaling factor to your preference */
+    z-index: 10;
+  }
+  
+  .nft.active video {
+    opacity: 1;
+  }
+
